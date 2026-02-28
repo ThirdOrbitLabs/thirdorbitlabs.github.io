@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — Recipe Grab | Third Orbit Labs LLC</title>
+    <meta name="description" content="Privacy Policy for Recipe Grab by Third Orbit Labs LLC." />
+    <link rel="canonical" href="https://thirdorbitlabs.com/apps/recipe-grab/privacy.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-deep: #050a0e;
+        --bg-primary: #070d12;
+        --bg-elevated: #0a1218;
+        --bg-card: rgba(14, 23, 31, 0.6);
+        --glass-border: rgba(255, 255, 255, 0.06);
+        --glass-border-light: rgba(255, 255, 255, 0.1);
+        --accent: #2dd4bf;
+        --accent-bright: #5eead4;
+        --accent-glow: rgba(45, 212, 191, 0.12);
+        --text-primary: #f0f4f8;
+        --text-secondary: #94a3b8;
+        --text-tertiary: #64748b;
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { background-color: #050a0e; scroll-behavior: smooth; }
+
+      body {
+        font-family: 'DM Sans', -apple-system, sans-serif;
+        background: var(--bg-deep);
+        color: var(--text-primary);
+        line-height: 1.7;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .atmosphere {
+        position: fixed; top: 0; left: 0;
+        width: 100%; height: 100%;
+        pointer-events: none; z-index: 0; overflow: hidden;
+        background-color: #050a0e;
+      }
+      .atmosphere::before {
+        content: '';
+        position: absolute; top: -50%; left: 50%;
+        transform: translateX(-50%);
+        width: 200%; height: 100%;
+        background:
+          radial-gradient(ellipse 40% 30% at 50% 0%, rgba(45,212,191,0.15) 0%, transparent 50%),
+          radial-gradient(ellipse 30% 20% at 30% 10%, rgba(45,212,191,0.08) 0%, transparent 40%);
+        animation: aurora 20s ease-in-out infinite alternate;
+      }
+      @keyframes aurora {
+        0% { transform: translateX(-50%) scale(1); opacity: 1; }
+        100% { transform: translateX(-50%) scale(1.1); opacity: 0.8; }
+      }
+
+      .grid-texture {
+        position: fixed; top: 0; left: 0;
+        width: 100%; height: 100%;
+        pointer-events: none; z-index: 0;
+        background-image:
+          linear-gradient(rgba(45,212,191,0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(45,212,191,0.02) 1px, transparent 1px);
+        background-size: 60px 60px;
+        mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 0%, transparent 70%);
+        -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 0%, transparent 70%);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 32px;
+        position: relative;
+        z-index: 1;
+      }
+      @media (max-width: 768px) {
+        .container { padding: 0 20px; }
+      }
+
+      .top-nav {
+        padding: 24px 0;
+        border-bottom: 1px solid var(--glass-border);
+        margin-bottom: 48px;
+      }
+      .top-nav a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
+      .top-nav a:hover { color: var(--accent); }
+      .top-nav .sep { margin: 0 8px; color: var(--text-tertiary); }
+
+      .page-header {
+        margin-bottom: 48px;
+      }
+      .page-header h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+        background: linear-gradient(135deg, var(--text-primary), var(--accent-bright));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .page-header .effective-date {
+        color: var(--text-tertiary);
+        font-size: 0.9rem;
+      }
+
+      .legal-card {
+        background: var(--bg-card);
+        border: 1px solid var(--glass-border);
+        border-radius: 16px;
+        padding: 40px;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        margin-bottom: 32px;
+      }
+      @media (max-width: 768px) {
+        .legal-card { padding: 24px; border-radius: 12px; }
+      }
+
+      h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--accent);
+        margin-top: 32px;
+        margin-bottom: 12px;
+      }
+      h2:first-child { margin-top: 0; }
+
+      p { margin-bottom: 12px; color: var(--text-secondary); }
+      ul { margin: 0 0 12px 20px; color: var(--text-secondary); }
+      li { margin-bottom: 6px; }
+
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { color: var(--accent-bright); text-decoration: underline; }
+
+      .page-footer {
+        margin-top: 48px;
+        padding: 24px 0;
+        border-top: 1px solid var(--glass-border);
+        text-align: center;
+        color: var(--text-tertiary);
+        font-size: 0.85rem;
+      }
+      .page-footer a { color: var(--text-secondary); margin: 0 12px; }
+      .page-footer a:hover { color: var(--accent); }
+      .footer-links { margin-bottom: 8px; }
+    </style>
+  </head>
+  <body>
+    <div class="atmosphere"></div>
+    <div class="grid-texture"></div>
+
+    <div class="container">
+      <nav class="top-nav">
+        <a href="https://thirdorbitlabs.com">Third Orbit Labs</a>
+        <span class="sep">/</span>
+        <a href="https://thirdorbitlabs.com/apps/recipe-grab/">Recipe Grab</a>
+        <span class="sep">/</span>
+        <span style="color: var(--text-primary)">Privacy Policy</span>
+      </nav>
+
+      <div class="page-header">
+        <h1>Privacy Policy</h1>
+        <p class="effective-date">Effective date: February 27, 2026</p>
+      </div>
+
+      <div class="legal-card">
+        <h2>1. Introduction</h2>
+        <p>Third Orbit Labs LLC ("we", "us", or "our") operates <strong>Recipe Grab</strong> (the "App"). This Privacy Policy explains how we collect, use, and protect your information when you use the App.</p>
+
+        <h2>2. Information We Collect</h2>
+        <p><strong>Data stored on your device:</strong></p>
+        <ul>
+          <li>Recipes you save (titles, ingredients, instructions, images, source URLs)</li>
+          <li>Grocery lists and shopping items</li>
+          <li>Recipe collections and organization data</li>
+          <li>App preferences and settings</li>
+        </ul>
+        <p>All of the above is stored locally on your device using Apple's SwiftData framework. We do not have access to this data, and it is never uploaded to our servers.</p>
+
+        <p><strong>Data sent to third-party services:</strong></p>
+        <ul>
+          <li>When you import a recipe by URL, the URL and extracted page content are sent to AI services (OpenAI and Google Gemini) for recipe extraction and parsing.</li>
+          <li>When you import a recipe from a photo or camera, the image content is sent to AI services for text recognition and recipe extraction.</li>
+        </ul>
+        <p>This data is sent solely to provide the App's core functionality and is not used for advertising, analytics, or profiling.</p>
+
+        <h2>3. Third-Party Services</h2>
+        <p>The App uses the following third-party services to provide its functionality:</p>
+        <ul>
+          <li><strong>OpenAI</strong> — AI-powered recipe extraction and parsing. <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI Privacy Policy</a></li>
+          <li><strong>Google (Gemini API)</strong> — AI-powered recipe extraction and parsing. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+        </ul>
+        <p>We encourage you to review each provider's privacy policy. We do not control how these services handle your data beyond what is described above.</p>
+
+        <h2>4. How We Use Your Information</h2>
+        <p>We use information solely to:</p>
+        <ul>
+          <li>Provide and improve the App's functionality</li>
+          <li>Process your recipe import and extraction requests</li>
+        </ul>
+        <p>We do <strong>not</strong> use your information for advertising, tracking, analytics, or profiling. We do <strong>not</strong> sell or share your personal information with third parties. We do <strong>not</strong> maintain user accounts or require registration.</p>
+
+        <h2>5. Data Storage &amp; Security</h2>
+        <p>Your data is stored on-device using Apple's SwiftData framework and is protected by your device's built-in security (passcode, Face ID, Touch ID). We do not operate servers that store your personal data.</p>
+
+        <h2>6. Data Retention &amp; Deletion</h2>
+        <p>Your data remains on your device for as long as you use the App. To delete all data, simply delete the App from your device. Uninstalling the App removes all locally stored data permanently.</p>
+
+        <h2>7. Children's Privacy</h2>
+        <p>The App is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us at the email below so we can take appropriate action.</p>
+
+        <h2>8. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with a revised effective date. Your continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+        <h2>9. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+        <p><a href="mailto:hello@thirdorbitlabs.com">hello@thirdorbitlabs.com</a></p>
+      </div>
+
+      <footer class="page-footer">
+        <div class="footer-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="support.html">Support</a>
+        </div>
+        <p>&copy; 2026 Third Orbit Labs LLC. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
